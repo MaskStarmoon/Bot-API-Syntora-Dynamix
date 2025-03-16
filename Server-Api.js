@@ -7,7 +7,6 @@ const path = require('path');
 const { cmd_src } = require('./cmd_module/index.js');
 
 app.use(express.json());
-
 app.post('/api/command', async (req, res) => {
     const { command, args } = req.body;
     
@@ -37,6 +36,8 @@ app.get('/api/command', async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
+app.get('/', (req, res) => { 
+ res.sendFile(path.join(__dirname, 'Web', 'index.html'));
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {});
