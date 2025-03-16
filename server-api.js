@@ -1,4 +1,4 @@
-// server api code
+/* BOT API WEB MADE BY RANGE */
 const express = require('express');
 const app = express();
 const fs = require('fs');
@@ -16,7 +16,7 @@ app.post('/api/command', async (req, res) => {
     }
 
     try {
-        const response = await cmd_src[command].Alya(args);
+        const response = await cmd_src[command].Syntora(args);
         res.json({ response });
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
@@ -31,7 +31,7 @@ app.get('/api/command', async (req, res) => {
     }
 
     try {
-        const response = await cmd_src[command].Alya(args);
+        const response = await cmd_src[command].Syntora(args);
         res.json({ response });
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
