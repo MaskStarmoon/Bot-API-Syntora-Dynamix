@@ -3,7 +3,7 @@
   "author": "Range",
   "description": "Bot API Web/JSON",
   "version": "1.2.0",
-  "main": "server-api.js",
+  "main": "index.js",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {},
@@ -21,6 +21,6 @@
     "https-proxy-agent": "^7.0.5"
   },
   "scripts": {
-    "start": "node server-api.js"
+    "start": "node index.js"
   }
 }
