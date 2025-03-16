@@ -10,10 +10,9 @@ if (!fs.existsSync(folderCmdPath)) {
     console.error("Folder cmd_module/cmd tidak ditemukan!");
 } else {
     console.log("Folder ditemukan, membaca file...");
-
-    fs.readdirSync(folderCmdPath).forEach(file => {
-        console.log("Mendeteksi file:", file);
-        if (file.endsWith('.js')) {
+    const files = fs.readdirSync(folderCmdPath).filter(file => file.endsWith('.js'));
+    console.log("Mendeteksi file:", files.join(", "));
+    files.forEach(file => {
             const filePath = path.join(folderCmdPath, file);
             try {
                 const command = require(filePath);
@@ -29,8 +28,7 @@ if (!fs.existsSync(folderCmdPath)) {
             } catch (error) {
                 console.error(`Gagal memuat file ${file}:`, error);
             }
-        }
-    });
+        });
 }
 
 module.exports = { cmd_src };
