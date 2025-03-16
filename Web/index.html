@@ -46,7 +46,7 @@
         function redirectToDocs() {
             const command = document.getElementById("commandInput").value.trim();
             if (command) {
-                window.location.href = `/docs/api/command?command=${encodeURIComponent(command)}`;
+                window.location.href = `api/command?command=${encodeURIComponent(command)}`;
             } else {
                 alert("Silakan masukkan command terlebih dahulu!");
             }
