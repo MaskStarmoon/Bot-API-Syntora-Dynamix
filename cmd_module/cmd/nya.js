@@ -6,7 +6,7 @@ module.exports = {
     peran: 0,
     tutor: "balas nyaw."
   }, 
-  Alya: async function (args) {
+  Syntora: async function (args) {
     return "Jangan ngespam yaa...^^";
   }
 };
