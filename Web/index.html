@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntora API Docs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📜 Dokumentasi API Syntora</h1>
+    <p>Masukkan command untuk melihat dokumentasi API.</p>
+
+    <input type="text" id="commandInput" placeholder="Masukkan command...">
+    <button onclick="redirectToDocs()">📄 Lihat Docs API</button>
+
+    <script>
+        function redirectToDocs() {
+            const command = document.getElementById("commandInput").value.trim();
+            if (command) {
+                window.location.href = `/docs/api/command?command=${encodeURIComponent(command)}`;
+            } else {
+                alert("Silakan masukkan command terlebih dahulu!");
+            }
+        }
+    </script>
+
+</body>
+</html>
