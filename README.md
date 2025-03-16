@@ -1,2 +1,2 @@
 # Bot-API-Syntora-Dynamix
-Bot API Facebook
+Bot API Web
